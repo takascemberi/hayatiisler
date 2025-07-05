@@ -1,9 +1,6 @@
 [build]
-  command = "NODE_OPTIONS='--max_old_space_size=4096' npm run build"
-  publish = ".next"
-
-[functions]
-  directory = "netlify/functions"
+  command = "npm run build"
+  publish = "out"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
