@@ -17,18 +17,18 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-black/40" />
 
-        {/* Başlıklar */}
+        {/* 🔥 BAŞLIKLAR */}
         <div className="absolute top-10 w-full flex flex-col items-center justify-start text-center px-4 z-10">
-          <h1 className="text-6xl md:text-8xl font-extrabold text-red-500 animate-pulse drop-shadow-[0_3px_6px_rgba(0,0,0,0.9)]">
+          <h1 className="text-[60px] md:text-[120px] font-extrabold text-red-600 animate-pulse drop-shadow-[0_5px_10px_rgba(255,0,0,0.9)]">
             HAYATİ İŞLER
           </h1>
-          <h2 className="text-3xl md:text-5xl mt-2 font-bold text-yellow-400 animate-bounce drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">
+          <h2 className="text-[40px] md:text-[80px] mt-2 font-bold text-yellow-400 animate-bounce drop-shadow-[0_4px_8px_rgba(255,255,0,0.9)]">
             Urfa Sıra Gecesi
           </h2>
         </div>
       </div>
 
-      {/* Açıklama Kutuları */}
+      {/* AÇIKLAMA KUTULARI */}
       <section className="bg-black py-16 px-4 text-center">
         <h3 className="text-3xl font-bold mb-12 text-white">Neden Hayati İşler?</h3>
 
