@@ -29,14 +29,14 @@ export default function Home() {
       </div>
 
       {/* Açıklama Kutuları */}
-      <section className="bg-black py-16 px-4 text-center">
-        <h3 className="text-3xl font-bold mb-12 text-white">Neden Hayati İşler?</h3>
+      <section className="bg-black py-20 px-6 text-center">
+        <h3 className="text-3xl font-bold mb-16 text-white drop-shadow-lg">Neden Hayati İşler?</h3>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* 1. Kutu */}
-          <div className="bg-gradient-to-br from-red-700 via-orange-500 to-yellow-400 text-white p-6 rounded-2xl shadow-2xl border-2 border-yellow-300 hover:scale-105 transition duration-300">
-            <h4 className="text-2xl font-bold mb-3">20+ Yıllık Sanat Yolculuğu</h4>
-            <p className="text-sm leading-relaxed">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          {/* Kutu 1 */}
+          <div className="rounded-3xl p-6 shadow-xl bg-gradient-to-br from-red-700 via-orange-400 to-yellow-300 hover:scale-105 transition-all duration-300 text-black">
+            <h4 className="text-2xl font-extrabold mb-4">20+ Yıllık Sanat Yolculuğu</h4>
+            <p className="text-sm leading-relaxed font-medium">
               Sanatçı Hayati İşler, 20 yılı aşkın sahne tecrübesiyle Türkiye’nin dört bir yanında ve
               yurt dışında yüzlerce programa imza atmıştır. Sahne hakimiyeti, ses rengi ve sahnedeki
               samimiyetiyle izleyicileri büyülemiştir. Her performans, gelenekle iç içe ama modern
@@ -44,10 +44,10 @@ export default function Home() {
             </p>
           </div>
 
-          {/* 2. Kutu */}
-          <div className="bg-gradient-to-br from-purple-800 via-pink-600 to-red-400 text-white p-6 rounded-2xl shadow-2xl border-2 border-pink-300 hover:scale-105 transition duration-300">
-            <h4 className="text-2xl font-bold mb-3">Gerçek Urfa Kültürü</h4>
-            <p className="text-sm leading-relaxed">
+          {/* Kutu 2 */}
+          <div className="rounded-3xl p-6 shadow-xl bg-gradient-to-br from-purple-800 via-pink-500 to-red-400 hover:scale-105 transition-all duration-300 text-white">
+            <h4 className="text-2xl font-extrabold mb-4">Gerçek Urfa Kültürü</h4>
+            <p className="text-sm leading-relaxed font-medium">
               Sıra gecesi, bir gelenekten öte yaşam biçimidir. Hayati İşler, repertuarından kıyafetine kadar
               bu kültürü birebir yaşatır. Ekip ruhu, otantik tavır ve geleneksel şarkılarla geçmişi bugüne taşır.
               Müzik, sohbet ve samimiyetin iç içe geçtiği bu gecelerde, misafirler gerçek Urfa ruhunu yaşar.
@@ -55,10 +55,10 @@ export default function Home() {
             </p>
           </div>
 
-          {/* 3. Kutu */}
-          <div className="bg-gradient-to-br from-green-700 via-teal-500 to-blue-400 text-white p-6 rounded-2xl shadow-2xl border-2 border-blue-300 hover:scale-105 transition duration-300">
-            <h4 className="text-2xl font-bold mb-3">Sıcak & Samimi Ortam</h4>
-            <p className="text-sm leading-relaxed">
+          {/* Kutu 3 */}
+          <div className="rounded-3xl p-6 shadow-xl bg-gradient-to-br from-emerald-700 via-teal-500 to-blue-400 hover:scale-105 transition-all duration-300 text-white">
+            <h4 className="text-2xl font-extrabold mb-4">Sıcak & Samimi Ortam</h4>
+            <p className="text-sm leading-relaxed font-medium">
               Hayati İşler’in sahnesi sadece bir müzik alanı değil, bir buluşma ve paylaşma ortamıdır.
               Düğün, nişan veya özel davet fark etmeksizin, misafirlerin gönlünü ısıtan bir sıcaklık sunar.
               Herkesin kendini rahat hissettiği, güldüğü ve eğlendiği unutulmaz bir gece yaşanır.
