@@ -1,14 +1,13 @@
 'use client';
 
-import Image from 'next/image';
 import { useState } from 'react';
-import 'react-image-lightbox/style.css';
-import Lightbox from 'react-image-lightbox';
+import Image from 'next/image';
+import Lightbox from 'yet-another-react-lightbox';
+import 'yet-another-react-lightbox/styles.css';
 
 export default function Gallery() {
   const images = Array.from({ length: 12 }, (_, i) => `/images/${i + 1}.jpg`);
-  const [isOpen, setIsOpen] = useState(false);
-  const [photoIndex, setPhotoIndex] = useState(0);
+  const [index, setIndex] = useState(-1); // -1: kapalı
 
   return (
     <div className="space-y-4">
@@ -22,29 +21,18 @@ export default function Gallery() {
               width={200}
               height={120}
               className="rounded-lg cursor-pointer shadow"
-              onClick={() => {
-                setPhotoIndex(i);
-                setIsOpen(true);
-              }}
+              onClick={() => setIndex(i)}
             />
           </div>
         ))}
       </div>
 
-      {isOpen && (
-        <Lightbox
-          mainSrc={images[photoIndex]}
-          nextSrc={images[(photoIndex + 1) % images.length]}
-          prevSrc={images[(photoIndex + images.length - 1) % images.length]}
-          onCloseRequest={() => setIsOpen(false)}
-          onMovePrevRequest={() =>
-            setPhotoIndex((photoIndex + images.length - 1) % images.length)
-          }
-          onMoveNextRequest={() =>
-            setPhotoIndex((photoIndex + 1) % images.length)
-          }
-        />
-      )}
+      <Lightbox
+        open={index >= 0}
+        index={index}
+        close={() => setIndex(-1)}
+        slides={images.map((src) => ({ src }))}
+      />
     </div>
   );
 }
