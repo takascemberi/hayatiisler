@@ -1,8 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
+  output: 'standalone',
+  experimental: {
+    typedRoutes: true,
+    serverActions: true,
+    // RAM azaltıcı
+    outputFileTracingRoot: false,
   },
+  images: {
+    unoptimized: true // Netlify’da build RAM patlamasını azaltır
+  }
 };
 
 module.exports = nextConfig;
