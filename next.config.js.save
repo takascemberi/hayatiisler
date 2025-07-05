@@ -1,14 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone',
-  experimental: {
-    typedRoutes: true,
-    serverActions: true,
-    // RAM azaltıcı
-    outputFileTracingRoot: false,
-  },
+  output: 'export',
   images: {
-    unoptimized: true // Netlify’da build RAM patlamasını azaltır
+    unoptimized: true
   }
 };
 
