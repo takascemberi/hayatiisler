@@ -131,14 +131,13 @@ footer a {
 }
 
 footer img {
-  width: 30px;
-  height: 30px;
-  margin: 0 6px;
+  width: 36px;
+  height: 36px;
+  margin: 0 8px;
   vertical-align: middle;
-  filter: drop-shadow(0 0 3px black);
+  object-fit: contain;
 }
 
-/* WhatsApp simgesi sabit */
 .floating-whatsapp {
   position: fixed;
   bottom: 20px;
