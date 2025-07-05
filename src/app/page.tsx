@@ -29,13 +29,32 @@ export default function Home() {
       {/* Tanıtım kutuları */}
       <section className="grid md:grid-cols-3 gap-6 px-6">
         <div className="bg-gradient-to-br from-red-500 to-yellow-400 text-white p-6 rounded-xl shadow-lg">
-          20 yıllık sahne tecrübesiyle Türkiye'nin dört bir yanında unutulmaz gecelere imza attık.
+          <h3 className="text-xl font-bold mb-2">20+ Yıllık Sanat Yolculuğu</h3>
+          <p>
+            Sanatçı Hayati İşler, 20 yılı aşkın sahne tecrübesiyle Türkiye’nin dört bir yanında ve yurt dışında yüzlerce programa imza atmıştır. 
+            Sahne hakimiyeti, ses rengi ve sahnedeki samimiyetiyle izleyicileri büyülemiştir. Her performans, gelenekle iç içe ama modern dokunuşlarla sunulur. 
+            Yılların verdiği birikim ve ustalıkla özel gecelere değer katmaktadır.
+          </p>
         </div>
-        <div className="bg-gradient-to-br from-purple-500 to-pink-400 text-white p-6 rounded-xl shadow-lg">
-          Yurtiçi ve yurtdışında düğün, nişan, konser gibi tüm etkinliklerde profesyonel performans.
+
+        <div className="bg-gradient-to-br from-purple-600 to-pink-500 text-white p-6 rounded-xl shadow-lg">
+          <h3 className="text-xl font-bold mb-2">Gerçek Urfa Kültürü</h3>
+          <p>
+            Sıra gecesi, bir gelenekten öte yaşam biçimidir. Hayati İşler, repertuarından kıyafetine kadar bu kültürü birebir yaşatır. 
+            Ekip ruhu, otantik tavır ve geleneksel şarkılarla geçmişi bugüne taşır. 
+            Müzik, sohbet ve samimiyetin iç içe geçtiği bu gecelerde, misafirler gerçek Urfa ruhunu yaşar. 
+            %100 kültürel sadakatle unutulmaz bir atmosfer oluşturulur.
+          </p>
         </div>
-        <div className="bg-gradient-to-br from-green-500 to-blue-400 text-white p-6 rounded-xl shadow-lg">
-          Zengin repertuar ve otantik Urfa Sıra Gecesi atmosferiyle unutulmaz bir deneyim.
+
+        <div className="bg-gradient-to-br from-emerald-500 to-blue-400 text-white p-6 rounded-xl shadow-lg">
+          <h3 className="text-xl font-bold mb-2">Sıcak & Samimi Ortam</h3>
+          <p>
+            Hayati İşler’in sahnesi sadece bir müzik alanı değil, bir buluşma ve paylaşma ortamıdır. 
+            Düğün, nişan veya özel davet fark etmeksizin, misafirlerin gönlünü ısıtan bir sıcaklık sunar. 
+            Herkesin kendini rahat hissettiği, güldüğü ve eğlendiği unutulmaz bir gece yaşanır. 
+            Eğlence kadar duygu da barındıran bu sıra geceleri, samimiyetin en saf halini sunar.
+          </p>
         </div>
       </section>
 
