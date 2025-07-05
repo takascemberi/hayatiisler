@@ -1,49 +1,82 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hayati İşler | Urfa Sıra Gecesi</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header>
-      <h1>Hayati İşler</h1>
-      <h2>Urfa Sıra Gecesi</h2>
-    </header>
-    <main>
-      <section class="hero">
-        <img src="/images/3.jpg" alt="Hayati İşler" class="main-image" />
-      </section>
-      <section class="info-boxes">
-        <div class="box red">20+ Yıllık Sanat Yolculuğu</div>
-        <div class="box purple">Gerçek Urfa Kültürü</div>
-        <div class="box green">Sıcak & Samimi Ortam</div>
-      </section>
-      <section class="gallery">
-        <h2>Galeri</h2>
-        <div class="images">
-          <!-- Galeri görselleri buraya gelecek -->
-        </div>
-      </section>
-      <section class="contact">
-        <h2>Rezervasyon Formu</h2>
-        <form>
-          <input type="text" placeholder="Ad Soyad" required />
-          <input type="tel" placeholder="Telefon" required />
-          <select required>
-            <option>Nişan</option>
-            <option>Düğün</option>
-            <option>Konser</option>
-            <option>TV Programı</option>
-          </select>
-          <textarea placeholder="Mesajınız"></textarea>
-          <button type="submit">Gönder</button>
-        </form>
-      </section>
-    </main>
-    <footer>
-      <p>Telif © 2025 Hayati İşler</p>
-    </footer>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hayati İşler - Urfa Sıra Gecesi</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Hayati İşler</h1>
+    <h2>Urfa Sıra Gecesi</h2>
+  </header>
+
+  <section class="hero">
+    <img src="images/3.jpg" alt="Hayati İşler" class="main-image" />
+  </section>
+
+  <section class="info-boxes">
+    <div class="box red">
+      <h3>20+ Yıllık Sanat Yolculuğu</h3>
+      <p>Sanatçı Hayati İşler, 20 yılı aşkın sahne tecrübesiyle Türkiye’nin dört bir yanında ve yurt dışında yüzlerce programa imza atmıştır. Sahne hakimiyeti, ses rengi ve sahnedeki samimiyetiyle izleyicileri büyülemiştir. Her performans, gelenekle iç içe ama modern dokunuşlarla sunulur. Yılların verdiği birikim ve ustalıkla özel gecelere değer katmaktadır.</p>
+    </div>
+    <div class="box purple">
+      <h3>Gerçek Urfa Kültürü</h3>
+      <p>Sıra gecesi, bir gelenekten öte yaşam biçimidir. Hayati İşler, repertuarından kıyafetine kadar bu kültürü birebir yaşatır. Ekip ruhu, otantik tavır ve geleneksel şarkılarla geçmişi bugüne taşır. Müzik, sohbet ve samimiyetin iç içe geçtiği bu gecelerde, misafirler gerçek Urfa ruhunu yaşar. %100 kültürel sadakatle unutulmaz bir atmosfer oluşturulur.</p>
+    </div>
+    <div class="box green">
+      <h3>Sıcak & Samimi Ortam</h3>
+      <p>Hayati İşler’in sahnesi sadece bir müzik alanı değil, bir buluşma ve paylaşma ortamıdır. Düğün, nişan veya özel davet fark etmeksizin, misafirlerin gönlünü ısıtan bir sıcaklık sunar. Herkesin kendini rahat hissettiği, güldüğü ve eğlendiği unutulmaz bir gece yaşanır. Eğlence kadar duygu da barındıran bu sıra geceleri, samimiyetin en saf halini sunar.</p>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <h2>Foto Galeri</h2>
+    <div class="images">
+      <!-- Resimler tek sıra ve eş boyda -->
+      <img src="images/1.jpg" alt="1" />
+      <img src="images/2.jpg" alt="2" />
+      <img src="images/4.jpg" alt="4" />
+      <img src="images/5.jpg" alt="5" />
+      <img src="images/6.jpg" alt="6" />
+      <img src="images/7.jpg" alt="7" />
+      <img src="images/8.jpg" alt="8" />
+      <img src="images/9.jpg" alt="9" />
+      <img src="images/10.jpg" alt="10" />
+      <img src="images/11.jpg" alt="11" />
+      <img src="images/12.jpg" alt="12" />
+      <img src="images/13.jpg" alt="13" />
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Rezervasyon Formu</h2>
+    <form>
+      <input type="text" placeholder="Ad Soyad" required />
+      <input type="tel" placeholder="Telefon" required />
+      <select>
+        <option value="">Etkinlik Türü Seçin</option>
+        <option value="nisan">Nişan</option>
+        <option value="dugun">Düğün</option>
+        <option value="davet">Özel Davet</option>
+      </select>
+      <textarea placeholder="Mesajınız" rows="5" required></textarea>
+      <button type="submit">Gönder</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>📞 <a href="tel:+905373839345" style="color:white">+90 537 383 93 45</a> | 📧 <a href="mailto:hayatiisler65@gmail.com" style="color:white">hayatiisler65@gmail.com</a></p>
+    <p>
+      <a href="https://www.instagram.com/hayatiisler" target="_blank">📸 Instagram</a> |
+      <a href="https://www.youtube.com/@hayatiisler" target="_blank">▶️ YouTube</a>
+    </p>
+  </footer>
+
+  <a href="https://wa.me/905373839345?text=Merhaba%20Hayati%20İşler%2C%20etkinlik%20için%20iletişime%20geçmek%20istiyorum" target="_blank" style="position: fixed; bottom: 20px; right: 20px;">
+    <img src="images/whatsapp.png" alt="WhatsApp" width="50" height="50" />
+  </a>
+
+</body>
 </html>
