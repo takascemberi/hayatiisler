@@ -4,19 +4,21 @@ const config: Config = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      colors: {
+        gold: '#FFD700',
+      },
       animation: {
-        gradient: 'gradient 5s ease infinite',
+        gradient: 'gradient 6s ease infinite',
       },
       keyframes: {
         gradient: {
-          '0%, 100%': { 'background-position': '0% 50%' },
-          '50%': { 'background-position': '100% 50%' },
-        },
-      },
-    },
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+        }
+      }
+    }
   },
-  plugins: [],
+  plugins: []
 };
 
 export default config;
-
