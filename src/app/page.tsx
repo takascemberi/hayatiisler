@@ -16,11 +16,13 @@ export default function Home() {
           priority
         />
         <div className="absolute inset-0 bg-black/40" />
+
+        {/* Büyük Başlıklar */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-          <h1 className="text-6xl md:text-8xl font-extrabold bg-gradient-to-r from-yellow-300 via-red-500 via-purple-500 via-indigo-500 to-blue-700 bg-clip-text text-transparent drop-shadow-xl animate-gradient">
+          <h1 className="text-6xl md:text-8xl font-extrabold bg-gradient-to-r from-yellow-300 via-red-500 to-purple-600 bg-clip-text text-transparent drop-shadow-[0_3px_6px_rgba(0,0,0,0.9)] animate-gradient">
             HAYATİ İŞLER
           </h1>
-          <h2 className="text-3xl md:text-5xl mt-4 font-semibold bg-gradient-to-r from-pink-400 via-yellow-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-md">
+          <h2 className="text-3xl md:text-5xl mt-4 font-semibold bg-gradient-to-r from-cyan-300 via-pink-300 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] animate-gradient">
             Urfa Sıra Gecesi
           </h2>
         </div>
