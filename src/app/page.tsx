@@ -22,7 +22,7 @@ export default function Home() {
           <h1 className="text-[48px] md:text-[96px] font-extrabold text-red-600 animate-pulse drop-shadow-[0_5px_10px_rgba(255,0,0,0.9)]">
             HAYATİ İŞLER
           </h1>
-          <h2 className="text-[36px] md:text-[72px] mt-2 font-bold bg-gradient-to-r from-yellow-300 via-red-500 to-pink-500 bg-clip-text text-transparent drop-shadow-[0_4px_8px_rgba(255,255,0,0.9)] animate-gradient">
+          <h2 className="text-[36px] md:text-[72px] mt-2 font-bold text-white drop-shadow-[0_4px_8px_rgba(255,215,0,0.9)] animate-bounce">
             Urfa Sıra Gecesi
           </h2>
         </div>
@@ -34,7 +34,7 @@ export default function Home() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* 1. Kutu */}
-          <div className="bg-gradient-to-br from-red-600 to-yellow-500 text-white p-6 rounded-2xl shadow-2xl border-2 border-yellow-300 hover:scale-105 transition duration-300">
+          <div className="bg-gradient-to-br from-red-700 via-orange-500 to-yellow-400 text-white p-6 rounded-2xl shadow-2xl border-2 border-yellow-300 hover:scale-105 transition duration-300">
             <h4 className="text-2xl font-bold mb-3">20+ Yıllık Sanat Yolculuğu</h4>
             <p className="text-sm leading-relaxed">
               Sanatçı Hayati İşler, 20 yılı aşkın sahne tecrübesiyle Türkiye’nin dört bir yanında ve
@@ -45,7 +45,7 @@ export default function Home() {
           </div>
 
           {/* 2. Kutu */}
-          <div className="bg-gradient-to-br from-purple-700 to-pink-500 text-white p-6 rounded-2xl shadow-2xl border-2 border-pink-300 hover:scale-105 transition duration-300">
+          <div className="bg-gradient-to-br from-purple-800 via-pink-600 to-red-400 text-white p-6 rounded-2xl shadow-2xl border-2 border-pink-300 hover:scale-105 transition duration-300">
             <h4 className="text-2xl font-bold mb-3">Gerçek Urfa Kültürü</h4>
             <p className="text-sm leading-relaxed">
               Sıra gecesi, bir gelenekten öte yaşam biçimidir. Hayati İşler, repertuarından kıyafetine kadar
@@ -56,7 +56,7 @@ export default function Home() {
           </div>
 
           {/* 3. Kutu */}
-          <div className="bg-gradient-to-br from-green-600 to-blue-400 text-white p-6 rounded-2xl shadow-2xl border-2 border-blue-300 hover:scale-105 transition duration-300">
+          <div className="bg-gradient-to-br from-green-700 via-teal-500 to-blue-400 text-white p-6 rounded-2xl shadow-2xl border-2 border-blue-300 hover:scale-105 transition duration-300">
             <h4 className="text-2xl font-bold mb-3">Sıcak & Samimi Ortam</h4>
             <p className="text-sm leading-relaxed">
               Hayati İşler’in sahnesi sadece bir müzik alanı değil, bir buluşma ve paylaşma ortamıdır.
