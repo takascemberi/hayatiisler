@@ -131,9 +131,11 @@ footer a {
 }
 
 footer img {
-  width: 36px;
-  margin: 0 8px;
+  width: 30px;
+  height: 30px;
+  margin: 0 6px;
   vertical-align: middle;
+  filter: drop-shadow(0 0 3px black);
 }
 
 /* WhatsApp simgesi sabit */
@@ -155,5 +157,9 @@ footer img {
   .gallery .images {
     flex-wrap: nowrap;
     overflow-x: scroll;
+  }
+  footer img {
+    width: 26px;
+    height: 26px;
   }
 }
