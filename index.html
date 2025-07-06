@@ -20,6 +20,13 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       max-width: 360px;
       min-width: 280px;
+      text-align: center;
+    }
+    .comment-box img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-bottom: 10px;
     }
     .comment-box h3 {
       margin: 0 0 8px;
@@ -30,29 +37,41 @@
       margin: 0;
       font-size: 0.95rem;
     }
-    #commentForm {
-      max-width: 500px;
-      margin: 20px auto;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    #commentForm input, #commentForm textarea, #commentForm button {
-      padding: 10px;
-      font-size: 1rem;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-    }
-    #commentForm button {
-      background-color: #4ade80;
-      color: black;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    #error {
-      color: red;
-      font-weight: bold;
-      text-align: center;
+      @media (max-width: 768px) {
+      .info-boxes {
+        flex-direction: column;
+        align-items: center;
+      }
+      .gallery .images img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        display: block;
+        margin: 10px auto;
+      }
+      form input, form select, form textarea, form button {
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .comment-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .main-image {
+        width: 100%;
+        height: auto;
+      }
+      footer div {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      div[style*="display: flex;"][style*="justify-content: center;"] {
+        flex-direction: column;
+        align-items: center !important;
+        gap: 10px !important;
+      }
     }
   </style>
 </head>
@@ -64,54 +83,31 @@
 
   <img src="images/3.jpg" alt="Hayati İşler" class="main-image" />
 
-  <section class="info-boxes">
-    <div class="box red">
-      <h3>20+ Yıllık Sanat Yolculuğu</h3>
-      <p>
-        Sanatçı Hayati İşler, 20 yılı aşkın sahne tecrübesiyle Türkiye’nin dört bir yanında ve yurt dışında yüzlerce programa imza atmıştır.
-        Sahne hakimiyeti, ses rengi ve sahnedeki samimiyetiyle izleyicileri büyülemiştir. Her performans, gelenekle iç içe ama modern dokunuşlarla sunulur.
-        Yılların verdiği birikim ve ustalıkla özel gecelere değer katmaktadır.
-      </p>
-    </div>
-    <div class="box purple">
-      <h3>Gerçek Urfa Kültürü</h3>
-      <p>
-        Sıra gecesi, bir gelenekten öte yaşam biçimidir. Hayati İşler, repertuarından kıyafetine kadar bu kültürü birebir yaşatır.
-        Ekip ruhu, otantik tavır ve geleneksel şarkılarla geçmişi bugüne taşır. Misafirler gerçek Urfa ruhunu yaşar. %100 kültürel sadakatle unutulmaz atmosfer sunulur.
-      </p>
-    </div>
-    <div class="box green">
-      <h3>Sıcak & Samimi Ortam</h3>
-      <p>
-        Hayati İşler’in sahnesi sadece müzik alanı değil, bir buluşma ve paylaşma ortamıdır.
-        Düğün, nişan veya özel davet fark etmeksizin misafirlerin gönlünü ısıtan bir sıcaklık sunar.
-        Herkesin kendini rahat hissettiği, güldüğü, eğlendiği unutulmaz geceler yaşanır.
-      </p>
-    </div>
-  </section>
+  <section class="info-boxes" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 40px 0;">
+  <div class="box red" style="flex: 1; min-width: 280px; background: linear-gradient(to right, #ff9a9e, #fad0c4); padding: 20px; border-radius: 20px; box-shadow: 0 8px 16px rgba(0,0,0,0.15);">
+    <h3 style="font-size: 1.4rem; color: #7c2d12;">🎤 20+ Yıllık Sanat Yolculuğu</h3>
+    <p>Sanatçı Hayati İşler, 20 yılı aşkın sahne deneyimiyle sadece Türkiye'nin 81 ilinde değil, aynı zamanda yurt dışında da yüzlerce konser, düğün ve özel davette sahne almıştır. Onun sesi, içtenliği ve sahnedeki güçlü varlığı izleyenlere unutulmaz anlar yaşatır. Her performansı, hem geleneksel hem modern dokunuşlarla zenginleştirilmiş, sahneye adanmış bir ömrün izlerini taşır.</p>
+  </div>
+  <div class="box purple" style="flex: 1; min-width: 280px; background: linear-gradient(to right, #a18cd1, #fbc2eb); padding: 20px; border-radius: 20px; box-shadow: 0 8px 16px rgba(0,0,0,0.15);">
+    <h3 style="font-size: 1.4rem; color: #4c1d95;">🌿 Gerçek Urfa Kültürü</h3>
+    <p>Urfa'nın köklü müzik geleneğini sadece seslendirmeyen, onu birebir yaşayan bir sanatçıdır Hayati İşler. Giyimi, repertuvarı, sahne düzeni ve performans diliyle Urfa kültürünü birebir yaşatır. Misafirlere sadece müzik değil, geçmişle bugünü birleştiren kültürel bir deneyim sunar. Sahnesi, Urfa'nın sokaklarından yükselen ezgileri her yüreğe taşır.</p>
+  </div>
+  <div class="box green" style="flex: 1; min-width: 280px; background: linear-gradient(to right, #d4fc79, #96e6a1); padding: 20px; border-radius: 20px; box-shadow: 0 8px 16px rgba(0,0,0,0.15);">
+    <h3 style="font-size: 1.4rem; color: #065f46;">💖 Sıcak & Samimi Ortam</h3>
+    <p>Hayati İşler’in sahnesi sadece müziğin değil, samimiyetin, muhabbetin ve eğlencenin merkezidir. Herkesin kendini evinde hissedeceği bir atmosfer yaratır. Davetlilerle kurduğu bağ, sahnedeki neşesi ve samimi üslubuyla adeta aileden biri gibi hissedilir. Her program, sadece müzik değil; aynı zamanda bir ruh, bir enerji ve içtenlik taşır.</p>
+  </div>
+</section>
 
   <section class="gallery">
     <h2>Foto Galeri</h2>
     <div class="images">
-      <img src="images/1.jpg" alt="Galeri 1" />
-      <img src="images/2.jpg" alt="Galeri 2" />
-      <img src="images/3.jpg" alt="Galeri 3" />
-      <img src="images/4.jpg" alt="Galeri 4" />
-      <img src="images/5.jpg" alt="Galeri 5" />
-      <img src="images/6.jpg" alt="Galeri 6" />
-      <img src="images/7.jpg" alt="Galeri 7" />
-      <img src="images/8.jpg" alt="Galeri 8" />
-      <img src="images/9.jpg" alt="Galeri 9" />
-      <img src="images/10.jpg" alt="Galeri 10" />
-      <img src="images/11.jpg" alt="Galeri 11" />
-      <img src="images/12.jpg" alt="Galeri 12" />
-      <img src="images/13.jpg" alt="Galeri 13" />
+      " + "".join([f"<img src='images/{i}.jpg' alt='Galeri {i}' />" for i in range(1, 14)]) + "
     </div>
   </section>
 
   <section class="contact">
     <h2>Rezervasyon Formu</h2>
-    <form action="https://formsubmit.co/hayatiisler65@gmail.com" method="POST">
+    <form action="https://formsubmit.co/hayatiisler65@gmail.com" method="POST" onsubmit="redirectToThankYou(); sendWhatsAppNotification();">
       <input type="text" name="Ad Soyad" placeholder="Ad Soyad" required />
       <input type="tel" name="Telefon" placeholder="Telefon" required />
       <select name="Etkinlik Türü" required>
@@ -124,188 +120,171 @@
       <button type="submit">Gönder</button>
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="table">
+      
     </form>
   </section>
 
   <section>
     <h2 style="text-align:center; margin-top:60px;">Ziyaretçi Yorumları</h2>
-    <div class="comment-container" id="commentContainer" style="display: none;"></div>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-    </div>
-    <!-- Yorum formu kaldırıldı -->
-  </section>
-
-  <!-- Kayan Yorumlar ve Beğeni/Yıldız Sistemi -->
-  <section style="margin: 60px 0;">
-    <h2 style="text-align:center;">Ziyaretçi Yorumları (Canlı)</h2>
-    <div style="overflow: hidden; white-space: nowrap; width: 100%; box-sizing: border-box;">
-      <div id="scrolling-comments" style="display: inline-block; animation: scroll-left 120s linear infinite; background: linear-gradient(to right, #ffecd2, #fcb69f); padding: 12px; border-radius: 8px;">
-        <span style="margin-right: 40px;">🎤 Ahmet Yılmaz: Böyle bir sesi canlı dinlemek büyük ayrıcalıktı.</span>
-        <span style="margin-right: 40px;">🎤 Ayşe Demir: Harika bir organizasyondu, emeğinize sağlık.</span>
-        <span style="margin-right: 40px;">🎤 Mehmet Kaya: Düğünümüzü şölene çevirdi.</span>
-        <span style="margin-right: 40px;">🎤 Elif Şahin: Sahnedeki duruşu çok profesyoneldi.</span>
-        <span style="margin-right: 40px;">🎤 Mustafa Koç: Salon coşkudan yıkıldı, bravo!</span>
-        <span style="margin-right: 40px;">🎤 Zeynep Arslan: Sahneye çıktığı anda tüm dikkatler onda toplandı.</span>
-        <span style="margin-right: 40px;">🎤 Hasan Acar: Tam bir sahne insanı!</span>
-        <span style="margin-right: 40px;">🎤 Fatma Yıldız: Repertuvar çok zengindi.</span>
-        <span style="margin-right: 40px;">🎤 Gülcan Doğan: Gerçekten unutulmaz bir geceydi.</span>
-        <span style="margin-right: 40px;">🎤 Halil Bozkurt: Herkese tavsiye ederim!</span>
-        <span style="margin-right: 40px;">🎤 Merve Polat: Enerjisiyle sahneyi ateşledi.</span>
-        <span style="margin-right: 40px;">🎤 Kemal Öztürk: Tüm konuklar memnun ayrıldı.</span>
-        <span style="margin-right: 40px;">🎤 Büşra Aksoy: Şarkı seçimleri harikaydı.</span>
-        <span style="margin-right: 40px;">🎤 Osman Güneş: İnanılmaz bir gece yaşattı bize.</span>
-        <span style="margin-right: 40px;">🎤 Sevgi Yalçın: Samimi ve içten bir performanstı.</span>
-        <span style="margin-right: 40px;">🎤 Murat Duran: Mikrofonu eline aldığı an büyüledi.</span>
-        <span style="margin-right: 40px;">🎤 Hülya Kurt: Tek kelimeyle muhteşemdi.</span>
-        <span style="margin-right: 40px;">🎤 Halil Bozkurt: Herkesi eğlendirmeyi başardı.</span>
-        <span style="margin-right: 40px;">🎤 Gülcan Doğan: Sahneye çok yakışıyor.</span>
-        <span style="margin-right: 40px;">🎤 İsmail Ekinci: Müzikal yetenek üst düzey.</span>
-        <span style="margin-right: 40px;">🎤 Hatice Kara: Şarkılara eşlik ettik, çok güzeldi.</span>
-        <span style="margin-right: 40px;">🎤 Baran Soylu: Her şarkıda başka bir duygu vardı.</span>
-        <span style="margin-right: 40px;">🎤 Seda Uğur: Tüm salon alkışladı.</span>
-        <span style="margin-right: 40px;">🎤 Okan Ateş: Kaliteli sahne performansıydı.</span>
-        <span style="margin-right: 40px;">🎤 Nurgül Karaca: Urfa gecesi deyince akla o geliyor.</span>
-        <span style="margin-right: 40px;">🎤 Cem Karahan: Profesyonellik akıyordu.</span>
-        <span style="margin-right: 40px;">🎤 Ayfer Kalay: Yürekten tebrikler!</span>
-        <span style="margin-right: 40px;">🎤 Derya Boz: Her anı dolu dolu geçti.</span>
-        <span style="margin-right: 40px;">🎤 Furkan Sezer: Davetliler unutamayacak bu geceyi.</span>
-        <span style="margin-right: 40px;">🎤 Filiz Erdem: Harika bir repertuar.</span>
-        <span style="margin-right: 40px;">🎤 Kadir Tunç: Her şey dört dörtlüktü.</span>
-        <span style="margin-right: 40px;">🎤 Nazlı İnce: Yürekten söylenen her şarkı hissedildi.</span>
-        <span style="margin-right: 40px;">🎤 Abdullah Şahin: Başarılarının devamını diliyoruz.</span>
-        <span style="margin-right: 40px;">🎤 Yasemin Ersoy: Sahne enerjisi çok yüksek.</span>
-        <span style="margin-right: 40px;">🎤 İlker Demirtaş: Teşekkürler Hayati İşler!</span>
-        <span style="margin-right: 40px;">🎤 Fadime Gür: Ne güzel bir akşamdı.</span>
-        <span style="margin-right: 40px;">🎤 Orhan Gökçe: Tüm şarkılar içimize işledi.</span>
-        <span style="margin-right: 40px;">🎤 Canan Soylu: Gecenin yıldızıydı.</span>
-        <span style="margin-right: 40px;">🎤 Halime Korkmaz: Bu performansı unutamayacağız.</span>
-        <span style="margin-right: 40px;">🎤 Erkut Erdem: Alkışlar size!</span>
-        <span style="margin-right: 40px;">🎤 Müjde Tekin: Tam bir profesyonel.</span>
-      </div>
-    </div>
-
-    <style>
-      @keyframes scroll-left {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
-}
-        100% { transform: translateX(100%); }
-      }
-        100% { transform: translateX(-100%); }
-      }
-    </style>
-
-    <div id="scrolling-feedback" style="overflow: hidden; white-space: nowrap; width: 100%; box-sizing: border-box; margin-top: 30px;">
-  <div style="display: inline-block; animation: scroll-left 60s linear infinite; background: linear-gradient(to right, #d4fc79, #96e6a1); padding: 12px; border-radius: 8px;">
-    <span style="margin-right: 60px; font-size: 1.1rem;">👍 10582 kişi beğendi</span>
-    <span style="margin-right: 60px; font-size: 1.1rem;">⭐ 10417 kişi 5 yıldız verdi</span>
-  </div>
+<div style="width: 100%; background: linear-gradient(to right, #ffecd2, #fcb69f); padding: 6px; font-size: 0.85rem; white-space: nowrap; overflow: hidden;">
+  <marquee behavior="scroll" direction="left" scrollamount="5">
+    🎤 Ayşe Demir: Harika bir organizasyondu, emeğinize sağlık.
+    🎤 Mehmet Kaya: Düğünümüzü şölene çevirdi.
+    🎤 Elif Şahin: Sahnedeki duruşu çok profesyoneldi.
+    🎤 Mustafa Koç: Salon coşkudan yıkıldı, bravo!
+    🎤 Zeynep Arslan: Sahneye çıktığı anda tüm dikkatler onda toplandı.
+    🎤 Hasan Acar: Tam bir sahne insanı!
+    🎤 Fatma Yıldız: Repertuvar çok zengindi.
+    🎤 Gülcan Doğan: Gerçekten unutulmaz bir geceydi.
+    🎤 Halil Bozkurt: Herkese tavsiye ederim!
+    🎤 Sevgi Yalçın: Samimi ve içten bir performanstı.
+    🎤 Murat Duran: Mikrofonu eline aldığı an büyüledi.
+    🎤 Hülya Kurt: Tek kelimeyle muhteşemdi.
+    🎤 Gülcan Doğan: Sahneye çok yakışıyor.
+    🎤 İsmail Ekinci: Müzikal yetenek üst düzey.
+    🎤 Hatice Kara: Şarkılara eşlik ettik, çok güzeldi.
+    🎤 Baran Soylu: Her şarkıda başka bir duygu vardı.
+    🎤 Seda Uğur: Tüm salon alkışladı.
+    🎤 Okan Ateş: Kaliteli sahne performansıydı.
+    🎤 Nurgül Karaca: Urfa gecesi deyince akla o geliyor.
+    🎤 Cem Karahan: Profesyonellik akıyordu.
+    🎤 Ayfer Kalay: Yürekten tebrikler!
+    🎤 Derya Boz: Her anı dolu dolu geçti.
+    🎤 Furkan Sezer: Davetliler unutamayacak bu geceyi.
+    🎤 Filiz Erdem: Harika bir repertuar.
+    🎤 Kadir Tunç: Her şey dört dörtlüktü.
+    🎤 Nazlı İnce: Yürekten söylenen her şarkı hissedildi.
+    🎤 Abdullah Şahin: Başarılarının devamını diliyoruz.
+    🎤 Yasemin Ersoy: Sahne enerjisi çok yüksek.
+    🎤 İlker Demirtaş: Teşekkürler Hayati İşler!
+    🎤 Fadime Gür: Ne güzel bir akşamdı.
+    🎤 Orhan Gökçe: Tüm şarkılar içimize işledi.
+    🎤 Canan Soylu: Gecenin yıldızıydı.
+    🎤 Halime Korkmaz: Bu performansı unutamayacağız.
+    🎤 Erkut Erdem: Alkışlar size!
+    🎤 Müjde Tekin: Tam bir profesyonel.
+    🎤 Salih Yıldız: Herkesin dilindeydi.
+    🎤 Aslı Karataş: Sanki Urfa'daydık.
+    🎤 Bekir Özgün: Sahnedeki enerjiye bayıldık.
+    🎤 Elvan Demir: Çok etkileyici bir repertuar.
+    🎤 Ramazan Gül: Eğlence dolu bir akşamdı.
+    🎤 Tülay Aras: Ruhumuza işleyen ezgilerdi.
+    🎤 Umut Bilgin: Gönüllerimizi fethetti.
+    🎤 Belgin Kurt: Anılarla dolu bir gece oldu.
+    🎤 Cihan Arı: Herkes sahneden gözünü alamadı.
+    🎤 Sibel Koç: Şarkılarla duygulandık.
+    🎤 Engin Uysal: Çok teşekkür ederiz.
+    🎤 Zeliha Polat: Her şey çok güzeldi.
+    🎤 Alperen Şahin: Şarkılarla büyülendik.
+    🎤 Meltem Aydın: Müziğin kalbi burada attı.
+    🎤 Kaan Duman: Harika organizasyon.
+    🎤 Binnur Sayın: Yine olsa yine gelirim!
+  </marquee>
 </div>
 
-<style>
-  @keyframes scroll-right {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
-  }
-</style>
+<div style="width: 100%; background: linear-gradient(to right, #d4fc79, #96e6a1); padding: 12px; font-size: 1rem; display: flex; justify-content: center; gap: 20px; margin-top: 10px;">
+  <button onclick="incrementLike()" style="background: white; border: none; padding: 10px; border-radius: 50%; font-size: 1.4rem; cursor: pointer;">👍</button>
+  <span id="like-count" style="font-weight: bold;">10582</span>
+  <button onclick="incrementStar()" style="background: white; border: none; padding: 10px; border-radius: 50%; font-size: 1.4rem; cursor: pointer;">⭐</button>
+  <span id="star-count" style="font-weight: bold;">10417</span>
+</div>
+    <div class="comment-container">
+  <!-- Ziyaretçi yorumları buraya eklenecek -->
+</div>
+
+<form id="commentForm" style="max-width: 500px; margin: 30px auto; display: flex; flex-direction: column; gap: 10px;">
+  <input type="text" id="name" placeholder="Adınız" required />
+  <textarea id="comment" placeholder="Yorumunuz" required></textarea>
+  <button type="submit">Yorum Gönder</button>
+  <p id="error" style="color: red; font-weight: bold; text-align: center;"></p>
+</form>
 
 <script>
-  function incrementLike() {
-    const count = document.getElementById('like-count');
-    count.textContent = parseInt(count.textContent) + 1;
-  }
-  function incrementStar() {
-    const count = document.getElementById('star-count');
-    count.textContent = parseInt(count.textContent) + 1;
+  const commentForm = document.getElementById("commentForm");
+  const commentContainer = document.querySelector(".comment-container");
+  const errorBox = document.getElementById("error");
+
+  let hasCommented = localStorage.getItem("hasCommented");
+
+  commentForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    if (hasCommented) {
+      errorBox.textContent = "Her ziyaretçi sadece bir kez yorum yapabilir.";
+      return;
+    }
+
+    const name = document.getElementById("name").value.trim();
+    const comment = document.getElementById("comment").value.trim();
+
+    if (!name || !comment) {
+      errorBox.textContent = "Lütfen tüm alanları doldurun.";
+      return;
+    }
+
+    const box = document.createElement("div");
+    box.className = "comment-box";
+    box.innerHTML = `<h3>${name}</h3><p>${comment}</p>`;
+    commentContainer.prepend(box);
+    localStorage.setItem("hasCommented", true);
+    errorBox.textContent = "Yorumunuz başarıyla gönderildi.";
+    commentForm.reset();
+  });
+  function sendWhatsAppNotification() {
+    const name = document.querySelector('input[name="Ad Soyad"]').value;
+    const tel = document.querySelector('input[name="Telefon"]').value;
+    const etkinlik = document.querySelector('select[name="Etkinlik Türü"]').value;
+    const mesaj = document.querySelector('textarea[name="Mesaj"]').value;
+    
+    const text = `Yeni rezervasyon!
+Ad Soyad: ${name}
+Telefon: ${tel}
+Etkinlik: ${etkinlik}
+Mesaj: ${mesaj}`;
+    const url = `https://wa.me/905373839345?text=${encodeURIComponent(text)}`;
+    window.location.href = url;
   }
 </script>
   </section>
 
-  <footer>
-    <p>İletişim: <a href="mailto:hayatiisler65@gmail.com">hayatiisler65@gmail.com</a> | Telefon: <a href="tel:+905373839345">+90 537 383 93 45</a></p>
-    <div>
-      <a href="https://www.instagram.com/hayati.islerurfasragecesi" target="_blank">
-        <img src="images/instagram.png" alt="Instagram" />
-      </a>
-      <a href="https://www.youtube.com/@hayatiislerurfasiragecesi6601" target="_blank">
-        <img src="images/youtube.png" alt="YouTube" />
-      </a>
-      <a href="mailto:hayatiisler65@gmail.com">
-        <img src="images/mail.png" alt="Mail" />
-      </a>
-    </div>
-  </footer>
+  
 
-  <a
-    href="https://wa.me/905373839345?text=Merhaba%20Hayati%20İşler%2C%20etkinlik%20için%20iletişime%20geçmek%20istiyorum"
-    class="floating-whatsapp"
-    target="_blank"
-  >
-    <img src="images/whatsapp.png" alt="WhatsApp" />
-  </a>
+<footer>
+  <p>İletişim: <a href="mailto:hayatiisler65@gmail.com">hayatiisler65@gmail.com</a> | Telefon: <a href="tel:+905373839345">+90 537 383 93 45</a></p>
+  <div>
+    <a href="https://www.instagram.com/hayati.islerurfasragecesi" target="_blank">
+      <img src="images/instagram.png" alt="Instagram" />
+    </a>
+    <a href="https://www.youtube.com/@hayatiislerurfasiragecesi6601" target="_blank">
+      <img src="images/youtube.png" alt="YouTube" />
+    </a>
+    <a href="mailto:hayatiisler65@gmail.com">
+      <img src="images/mail.png" alt="Mail" />
+    </a>
+  </div>
+  <div style="text-align: center; margin-top: 20px;">
+    <a href="https://wa.me/905373839345?text=Merhaba%20Hayati%20İşler%2C%20etkinlik%20için%20iletişime%20geçmek%20istiyorum" class="floating-whatsapp" target="_blank">
+      <img src="images/whatsapp.png" alt="WhatsApp" />
+    </a>
+  </div>
+</footer>
+
+  
 
   <audio id="bg-music" autoplay loop muted style="display: none;">
     <source src="urfa-final.mp3" type="audio/mp3" />
     Tarayıcınız bu müziği desteklemiyor.
   </audio>
 
-  <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      const audio = document.getElementById('bg-music');
-      audio.muted = false;
-      audio.play().catch(e => {
-        console.log("Tarayıcı otomatik çalmaya izin vermedi:", e);
-      });
-    });
 
-    const form = document.getElementById("commentForm");
-    const container = document.getElementById("commentContainer");
-    const errorBox = document.getElementById("error");
 
-    const forbiddenWords = ["amk", "aq", "orospu", "salak", "aptal", "piç", "sik", "yarrak", "anan", "göt", "meme", "siktir", "küfür", "hakaret", "ibne", "berbat", "çok kötü", "kro", "şerefsiz", "kargakürt"];
 
-    form.addEventListener("submit", function(e) {
-      e.preventDefault();
-      const name = document.getElementById("name").value.trim();
-      const comment = document.getElementById("comment").value.trim();
-
-      const lowerComment = comment.toLowerCase();
-      const containsBad = forbiddenWords.some(word => lowerComment.includes(word));
-      if (containsBad) {
-        errorBox.textContent = "Uygunsuz kelimeler içeriyor. Lütfen nazik olun.";
-        return;
-      }
-
-      errorBox.textContent = "";
-      const box = document.createElement("div");
-      box.className = "comment-box";
-      box.innerHTML = `<h3>${name}</h3><p>${comment}</p>`;
-      container.prepend(box);
-      form.reset();
-    });
-  </script>
+<script>
+  function redirectToThankYou() {
+    setTimeout(() => {
+      alert("Teşekkürler! Rezervasyon talebiniz alındı. WhatsApp üzerinden bilgilendirileceksiniz.");
+    }, 100);
+  }
+</script>
 </body>
 </html>
