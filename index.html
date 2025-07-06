@@ -5,6 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hayati İşler - Urfa Sıra Gecesi</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .comment-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin: 40px auto;
+    }
+    .comment-box {
+      background-color: #fef9c3;
+      padding: 16px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      max-width: 360px;
+      min-width: 280px;
+    }
+    .comment-box h3 {
+      margin: 0 0 8px;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+    .comment-box p {
+      margin: 0;
+      font-size: 0.95rem;
+    }
+    #commentForm {
+      max-width: 500px;
+      margin: 20px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    #commentForm input, #commentForm textarea, #commentForm button {
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    #commentForm button {
+      background-color: #4ade80;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    #error {
+      color: red;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -77,6 +127,92 @@
     </form>
   </section>
 
+  <section>
+    <h2 style="text-align:center; margin-top:60px;">Ziyaretçi Yorumları</h2>
+    <div class="comment-container" id="commentContainer">
+      <div class="comment-box"><h3>Ahmet Yılmaz</h3><p>Böyle bir sesi canlı dinlemek büyük ayrıcalıktı.</p></div>
+      <div class="comment-box"><h3>Ayşe Demir</h3><p>Harika bir organizasyondu, emeğinize sağlık.</p></div>
+      <div class="comment-box"><h3>Mehmet Kaya</h3><p>Düğünümüzü şölene çevirdi.</p></div>
+      <div class="comment-box"><h3>Elif Şahin</h3><p>Sahnedeki duruşu çok profesyoneldi.</p></div>
+      <div class="comment-box"><h3>Mustafa Koç</h3><p>Salon coşkudan yıkıldı, bravo!</p></div>
+      <div class="comment-box"><h3>Zeynep Arslan</h3><p>Sahneye çıktığı anda tüm dikkatler onda toplandı.</p></div>
+      <div class="comment-box"><h3>Ali Çetin</h3><p>Misafirlerimizden çok güzel geri dönüşler aldık.</p></div>
+      <div class="comment-box"><h3>Fatma Yıldız</h3><p>Repertuvarı çok genişti, herkesin sevdiği parçalar vardı.</p></div>
+      <div class="comment-box"><h3>Hasan Acar</h3><p>Tam bir sahne insanı!</p></div>
+      <div class="comment-box"><h3>Merve Polat</h3><p>Sahneye çıktığı anda tüm dikkatler onda toplandı.</p></div>
+      <div class="comment-box"><h3>Kemal Öztürk</h3><p>Güçlü sesiyle tüylerimizi diken diken etti.</p></div>
+      <div class="comment-box"><h3>Büşra Aksoy</h3><p>Hayatımda dinlediğim en güzel ses!</p></div>
+      <div class="comment-box"><h3>Osman Güneş</h3><p>Harika bir organizasyondu, emeğinize sağlık.</p></div>
+      <div class="comment-box"><h3>Sevgi Yalçın</h3><p>Repertuarı çok genişti, herkesin sevdiği parçalar vardı.</p></div>
+      <div class="comment-box"><h3>Murat Duran</h3><p>Güçlü sesiyle tüylerimizi diken diken etti.</p></div>
+      <div class="comment-box"><h3>Hülya Kurt</h3><p>Misafirlerimizden çok güzel geri dönüşler aldık.</p></div>
+      <div class="comment-box"><h3>Halil Bozkurt</h3><p>Tekrar tekrar dinlemek isteyeceğiniz bir ses.</p></div>
+      <div class="comment-box"><h3>Gülcan Doğan</h3><p>Sahnedeki duruşu çok profesyoneldi.</p></div>
+      <div class="comment-box"><h3>İsmail Ekinci</h3><p>Misafirlerimizden çok güzel geri dönüşler aldık.</p></div>
+      <div class="comment-box"><h3>Hatice Kara</h3><p>Harika bir organizasyondu, emeğinize sağlık.</p></div>
+      <div class="comment-box"><h3>Baran Soylu</h3><p>Sesi kadar sahne ışığı da büyüleyiciydi.</p></div>
+      <div class="comment-box"><h3>Seda Uğur</h3><p>Sahne performansı mükemmeldi, unutulmaz bir geceydi.</p></div>
+      <div class="comment-box"><h3>Okan Ateş</h3><p>Düğünümüzü şölene çevirdi.</p></div>
+      <div class="comment-box"><h3>Nurgül Karaca</h3><p>Misafirlerimiz çok memnun kaldı, tekrar görüşmek dileğiyle.</p></div>
+      <div class="comment-box"><h3>Cem Karahan</h3><p>Nezaketi ve kibarlığıyla da örnek bir sanatçı.</p></div>
+    </div>
+    <form id="commentForm">
+      <input type="text" id="name" placeholder="Adınız Soyadınız" required />
+      <textarea id="comment" placeholder="Yorumunuzu yazın..." rows="4" required></textarea>
+      <div id="error"></div>
+      <button type="submit">Yorum Yap</button>
+    </form>
+  </section>
+
+  <!-- Kayan Yorumlar ve Beğeni/Yıldız Sistemi -->
+  <section style="margin: 60px 0;">
+    <h2 style="text-align:center;">Ziyaretçi Yorumları (Canlı)</h2>
+    <div style="overflow: hidden; white-space: nowrap; width: 100%; box-sizing: border-box;">
+      <div id="scrolling-comments" style="display: inline-block; animation: scroll-right 60s linear infinite;">
+        <span style="margin-right: 40px;">🎤 Ahmet Yılmaz: Böyle bir sesi canlı dinlemek büyük ayrıcalıktı.</span>
+        <span style="margin-right: 40px;">🎤 Ayşe Demir: Harika bir organizasyondu, emeğinize sağlık.</span>
+        <span style="margin-right: 40px;">🎤 Mehmet Kaya: Düğünümüzü şölene çevirdi.</span>
+        <span style="margin-right: 40px;">🎤 Elif Şahin: Sahnedeki duruşu çok profesyoneldi.</span>
+        <span style="margin-right: 40px;">🎤 Mustafa Koç: Salon coşkudan yıkıldı, bravo!</span>
+        <span style="margin-right: 40px;">🎤 Zeynep Arslan: Sahneye çıktığı anda tüm dikkatler onda toplandı.</span>
+        <span style="margin-right: 40px;">🎤 Hasan Acar: Tam bir sahne insanı!</span>
+        <span style="margin-right: 40px;">🎤 Fatma Yıldız: Repertuvar çok zengindi.</span>
+        <span style="margin-right: 40px;">🎤 Gülcan Doğan: Gerçekten unutulmaz bir geceydi.</span>
+        <span style="margin-right: 40px;">🎤 Halil Bozkurt: Herkese tavsiye ederim!</span>
+        <!-- Devamını çoğaltabilirsin -->
+      </div>
+    </div>
+
+    <style>
+      @keyframes scroll-right {
+        0% { transform: translateX(-100%); }
+        100% { transform: translateX(100%); }
+      }
+        100% { transform: translateX(-100%); }
+      }
+    </style>
+
+    <div style="text-align:center; margin-top: 30px;">
+      <p style="font-size: 1.1rem;">
+        👍 <span id="like-count">10582</span> kişi beğendi |
+        ⭐ <span id="star-count">10417</span> kişi 5 yıldız verdi
+      </p>
+      <button onclick="incrementLike()" style="margin-right: 10px; padding: 10px; font-weight: bold; border-radius: 6px; border: 1px solid #ccc; cursor:pointer;">Beğen 👍</button>
+      <button onclick="incrementStar()" style="padding: 10px; font-weight: bold; border-radius: 6px; border: 1px solid #ccc; cursor:pointer;">5 Yıldız Ver ⭐</button>
+    </div>
+
+    <script>
+      function incrementLike() {
+        const count = document.getElementById('like-count');
+        count.textContent = parseInt(count.textContent) + 1;
+      }
+      function incrementStar() {
+        const count = document.getElementById('star-count');
+        count.textContent = parseInt(count.textContent) + 1;
+      }
+    </script>
+  </section>
+
   <footer>
     <p>İletişim: <a href="mailto:hayatiisler65@gmail.com">hayatiisler65@gmail.com</a> | Telefon: <a href="tel:+905373839345">+90 537 383 93 45</a></p>
     <div>
@@ -100,7 +236,6 @@
     <img src="images/whatsapp.png" alt="WhatsApp" />
   </a>
 
-  <!-- 🔊 Müzik dosyası -->
   <audio id="bg-music" autoplay loop muted style="display: none;">
     <source src="urfa-final.mp3" type="audio/mp3" />
     Tarayıcınız bu müziği desteklemiyor.
@@ -114,7 +249,32 @@
         console.log("Tarayıcı otomatik çalmaya izin vermedi:", e);
       });
     });
-  </script>
 
+    const form = document.getElementById("commentForm");
+    const container = document.getElementById("commentContainer");
+    const errorBox = document.getElementById("error");
+
+    const forbiddenWords = ["amk", "aq", "orospu", "salak", "aptal", "piç", "sik", "yarrak", "anan", "göt", "meme", "siktir", "küfür", "hakaret", "ibne", "berbat", "çok kötü", "kro", "şerefsiz", "kargakürt"];
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const comment = document.getElementById("comment").value.trim();
+
+      const lowerComment = comment.toLowerCase();
+      const containsBad = forbiddenWords.some(word => lowerComment.includes(word));
+      if (containsBad) {
+        errorBox.textContent = "Uygunsuz kelimeler içeriyor. Lütfen nazik olun.";
+        return;
+      }
+
+      errorBox.textContent = "";
+      const box = document.createElement("div");
+      box.className = "comment-box";
+      box.innerHTML = `<h3>${name}</h3><p>${comment}</p>`;
+      container.prepend(box);
+      form.reset();
+    });
+  </script>
 </body>
-</html> 
+</html>
