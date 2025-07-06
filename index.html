@@ -129,46 +129,40 @@
 
   <section>
     <h2 style="text-align:center; margin-top:60px;">Ziyaretçi Yorumları</h2>
-    <div class="comment-container" id="commentContainer">
-      <div class="comment-box"><h3>Ahmet Yılmaz</h3><p>Böyle bir sesi canlı dinlemek büyük ayrıcalıktı.</p></div>
-      <div class="comment-box"><h3>Ayşe Demir</h3><p>Harika bir organizasyondu, emeğinize sağlık.</p></div>
-      <div class="comment-box"><h3>Mehmet Kaya</h3><p>Düğünümüzü şölene çevirdi.</p></div>
-      <div class="comment-box"><h3>Elif Şahin</h3><p>Sahnedeki duruşu çok profesyoneldi.</p></div>
-      <div class="comment-box"><h3>Mustafa Koç</h3><p>Salon coşkudan yıkıldı, bravo!</p></div>
-      <div class="comment-box"><h3>Zeynep Arslan</h3><p>Sahneye çıktığı anda tüm dikkatler onda toplandı.</p></div>
-      <div class="comment-box"><h3>Ali Çetin</h3><p>Misafirlerimizden çok güzel geri dönüşler aldık.</p></div>
-      <div class="comment-box"><h3>Fatma Yıldız</h3><p>Repertuvarı çok genişti, herkesin sevdiği parçalar vardı.</p></div>
-      <div class="comment-box"><h3>Hasan Acar</h3><p>Tam bir sahne insanı!</p></div>
-      <div class="comment-box"><h3>Merve Polat</h3><p>Sahneye çıktığı anda tüm dikkatler onda toplandı.</p></div>
-      <div class="comment-box"><h3>Kemal Öztürk</h3><p>Güçlü sesiyle tüylerimizi diken diken etti.</p></div>
-      <div class="comment-box"><h3>Büşra Aksoy</h3><p>Hayatımda dinlediğim en güzel ses!</p></div>
-      <div class="comment-box"><h3>Osman Güneş</h3><p>Harika bir organizasyondu, emeğinize sağlık.</p></div>
-      <div class="comment-box"><h3>Sevgi Yalçın</h3><p>Repertuarı çok genişti, herkesin sevdiği parçalar vardı.</p></div>
-      <div class="comment-box"><h3>Murat Duran</h3><p>Güçlü sesiyle tüylerimizi diken diken etti.</p></div>
-      <div class="comment-box"><h3>Hülya Kurt</h3><p>Misafirlerimizden çok güzel geri dönüşler aldık.</p></div>
-      <div class="comment-box"><h3>Halil Bozkurt</h3><p>Tekrar tekrar dinlemek isteyeceğiniz bir ses.</p></div>
-      <div class="comment-box"><h3>Gülcan Doğan</h3><p>Sahnedeki duruşu çok profesyoneldi.</p></div>
-      <div class="comment-box"><h3>İsmail Ekinci</h3><p>Misafirlerimizden çok güzel geri dönüşler aldık.</p></div>
-      <div class="comment-box"><h3>Hatice Kara</h3><p>Harika bir organizasyondu, emeğinize sağlık.</p></div>
-      <div class="comment-box"><h3>Baran Soylu</h3><p>Sesi kadar sahne ışığı da büyüleyiciydi.</p></div>
-      <div class="comment-box"><h3>Seda Uğur</h3><p>Sahne performansı mükemmeldi, unutulmaz bir geceydi.</p></div>
-      <div class="comment-box"><h3>Okan Ateş</h3><p>Düğünümüzü şölene çevirdi.</p></div>
-      <div class="comment-box"><h3>Nurgül Karaca</h3><p>Misafirlerimiz çok memnun kaldı, tekrar görüşmek dileğiyle.</p></div>
-      <div class="comment-box"><h3>Cem Karahan</h3><p>Nezaketi ve kibarlığıyla da örnek bir sanatçı.</p></div>
+    <div class="comment-container" id="commentContainer" style="display: none;"></div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     </div>
-    <form id="commentForm">
-      <input type="text" id="name" placeholder="Adınız Soyadınız" required />
-      <textarea id="comment" placeholder="Yorumunuzu yazın..." rows="4" required></textarea>
-      <div id="error"></div>
-      <button type="submit">Yorum Yap</button>
-    </form>
+    <!-- Yorum formu kaldırıldı -->
   </section>
 
   <!-- Kayan Yorumlar ve Beğeni/Yıldız Sistemi -->
   <section style="margin: 60px 0;">
     <h2 style="text-align:center;">Ziyaretçi Yorumları (Canlı)</h2>
     <div style="overflow: hidden; white-space: nowrap; width: 100%; box-sizing: border-box;">
-      <div id="scrolling-comments" style="display: inline-block; animation: scroll-right 60s linear infinite;">
+      <div id="scrolling-comments" style="display: inline-block; animation: scroll-left 120s linear infinite; background: linear-gradient(to right, #ffecd2, #fcb69f); padding: 12px; border-radius: 8px;">
         <span style="margin-right: 40px;">🎤 Ahmet Yılmaz: Böyle bir sesi canlı dinlemek büyük ayrıcalıktı.</span>
         <span style="margin-right: 40px;">🎤 Ayşe Demir: Harika bir organizasyondu, emeğinize sağlık.</span>
         <span style="margin-right: 40px;">🎤 Mehmet Kaya: Düğünümüzü şölene çevirdi.</span>
@@ -179,38 +173,75 @@
         <span style="margin-right: 40px;">🎤 Fatma Yıldız: Repertuvar çok zengindi.</span>
         <span style="margin-right: 40px;">🎤 Gülcan Doğan: Gerçekten unutulmaz bir geceydi.</span>
         <span style="margin-right: 40px;">🎤 Halil Bozkurt: Herkese tavsiye ederim!</span>
-        <!-- Devamını çoğaltabilirsin -->
+        <span style="margin-right: 40px;">🎤 Merve Polat: Enerjisiyle sahneyi ateşledi.</span>
+        <span style="margin-right: 40px;">🎤 Kemal Öztürk: Tüm konuklar memnun ayrıldı.</span>
+        <span style="margin-right: 40px;">🎤 Büşra Aksoy: Şarkı seçimleri harikaydı.</span>
+        <span style="margin-right: 40px;">🎤 Osman Güneş: İnanılmaz bir gece yaşattı bize.</span>
+        <span style="margin-right: 40px;">🎤 Sevgi Yalçın: Samimi ve içten bir performanstı.</span>
+        <span style="margin-right: 40px;">🎤 Murat Duran: Mikrofonu eline aldığı an büyüledi.</span>
+        <span style="margin-right: 40px;">🎤 Hülya Kurt: Tek kelimeyle muhteşemdi.</span>
+        <span style="margin-right: 40px;">🎤 Halil Bozkurt: Herkesi eğlendirmeyi başardı.</span>
+        <span style="margin-right: 40px;">🎤 Gülcan Doğan: Sahneye çok yakışıyor.</span>
+        <span style="margin-right: 40px;">🎤 İsmail Ekinci: Müzikal yetenek üst düzey.</span>
+        <span style="margin-right: 40px;">🎤 Hatice Kara: Şarkılara eşlik ettik, çok güzeldi.</span>
+        <span style="margin-right: 40px;">🎤 Baran Soylu: Her şarkıda başka bir duygu vardı.</span>
+        <span style="margin-right: 40px;">🎤 Seda Uğur: Tüm salon alkışladı.</span>
+        <span style="margin-right: 40px;">🎤 Okan Ateş: Kaliteli sahne performansıydı.</span>
+        <span style="margin-right: 40px;">🎤 Nurgül Karaca: Urfa gecesi deyince akla o geliyor.</span>
+        <span style="margin-right: 40px;">🎤 Cem Karahan: Profesyonellik akıyordu.</span>
+        <span style="margin-right: 40px;">🎤 Ayfer Kalay: Yürekten tebrikler!</span>
+        <span style="margin-right: 40px;">🎤 Derya Boz: Her anı dolu dolu geçti.</span>
+        <span style="margin-right: 40px;">🎤 Furkan Sezer: Davetliler unutamayacak bu geceyi.</span>
+        <span style="margin-right: 40px;">🎤 Filiz Erdem: Harika bir repertuar.</span>
+        <span style="margin-right: 40px;">🎤 Kadir Tunç: Her şey dört dörtlüktü.</span>
+        <span style="margin-right: 40px;">🎤 Nazlı İnce: Yürekten söylenen her şarkı hissedildi.</span>
+        <span style="margin-right: 40px;">🎤 Abdullah Şahin: Başarılarının devamını diliyoruz.</span>
+        <span style="margin-right: 40px;">🎤 Yasemin Ersoy: Sahne enerjisi çok yüksek.</span>
+        <span style="margin-right: 40px;">🎤 İlker Demirtaş: Teşekkürler Hayati İşler!</span>
+        <span style="margin-right: 40px;">🎤 Fadime Gür: Ne güzel bir akşamdı.</span>
+        <span style="margin-right: 40px;">🎤 Orhan Gökçe: Tüm şarkılar içimize işledi.</span>
+        <span style="margin-right: 40px;">🎤 Canan Soylu: Gecenin yıldızıydı.</span>
+        <span style="margin-right: 40px;">🎤 Halime Korkmaz: Bu performansı unutamayacağız.</span>
+        <span style="margin-right: 40px;">🎤 Erkut Erdem: Alkışlar size!</span>
+        <span style="margin-right: 40px;">🎤 Müjde Tekin: Tam bir profesyonel.</span>
       </div>
     </div>
 
     <style>
-      @keyframes scroll-right {
-        0% { transform: translateX(-100%); }
+      @keyframes scroll-left {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
         100% { transform: translateX(100%); }
       }
         100% { transform: translateX(-100%); }
       }
     </style>
 
-    <div style="text-align:center; margin-top: 30px;">
-      <p style="font-size: 1.1rem;">
-        👍 <span id="like-count">10582</span> kişi beğendi |
-        ⭐ <span id="star-count">10417</span> kişi 5 yıldız verdi
-      </p>
-      <button onclick="incrementLike()" style="margin-right: 10px; padding: 10px; font-weight: bold; border-radius: 6px; border: 1px solid #ccc; cursor:pointer;">Beğen 👍</button>
-      <button onclick="incrementStar()" style="padding: 10px; font-weight: bold; border-radius: 6px; border: 1px solid #ccc; cursor:pointer;">5 Yıldız Ver ⭐</button>
-    </div>
+    <div id="scrolling-feedback" style="overflow: hidden; white-space: nowrap; width: 100%; box-sizing: border-box; margin-top: 30px;">
+  <div style="display: inline-block; animation: scroll-left 60s linear infinite; background: linear-gradient(to right, #d4fc79, #96e6a1); padding: 12px; border-radius: 8px;">
+    <span style="margin-right: 60px; font-size: 1.1rem;">👍 10582 kişi beğendi</span>
+    <span style="margin-right: 60px; font-size: 1.1rem;">⭐ 10417 kişi 5 yıldız verdi</span>
+  </div>
+</div>
 
-    <script>
-      function incrementLike() {
-        const count = document.getElementById('like-count');
-        count.textContent = parseInt(count.textContent) + 1;
-      }
-      function incrementStar() {
-        const count = document.getElementById('star-count');
-        count.textContent = parseInt(count.textContent) + 1;
-      }
-    </script>
+<style>
+  @keyframes scroll-right {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+</style>
+
+<script>
+  function incrementLike() {
+    const count = document.getElementById('like-count');
+    count.textContent = parseInt(count.textContent) + 1;
+  }
+  function incrementStar() {
+    const count = document.getElementById('star-count');
+    count.textContent = parseInt(count.textContent) + 1;
+  }
+</script>
   </section>
 
   <footer>
