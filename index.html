@@ -59,25 +59,24 @@
     </div>
   </section>
 
- <section class="contact">
-  <h2>Rezervasyon Formu</h2>
-  <form action="https://formsubmit.co/hayatiisler65@gmail.com" method="POST">
-    <input type="text" name="Ad Soyad" placeholder="Ad Soyad" required />
-    <input type="tel" name="Telefon" placeholder="Telefon" required />
-    <select name="Etkinlik Türü" required>
-      <option value="">Etkinlik Türü Seçin</option>
-      <option value="nişan">Nişan</option>
-      <option value="düğün">Düğün</option>
-      <option value="davet">Özel Davet</option>
-    </select>
-    <textarea name="Mesaj" placeholder="Mesajınız" required></textarea>
-    <button type="submit">Gönder</button>
+  <section class="contact">
+    <h2>Rezervasyon Formu</h2>
+    <form action="https://formsubmit.co/hayatiisler65@gmail.com" method="POST">
+      <input type="text" name="Ad Soyad" placeholder="Ad Soyad" required />
+      <input type="tel" name="Telefon" placeholder="Telefon" required />
+      <select name="Etkinlik Türü" required>
+        <option value="">Etkinlik Türü Seçin</option>
+        <option value="nişan">Nişan</option>
+        <option value="düğün">Düğün</option>
+        <option value="davet">Özel Davet</option>
+      </select>
+      <textarea name="Mesaj" placeholder="Mesajınız" required></textarea>
+      <button type="submit">Gönder</button>
 
-    <!-- Formsubmit ayarları -->
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
-  </form>
-</section>
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+    </form>
+  </section>
 
   <footer>
     <p>İletişim: <a href="mailto:hayatiisler65@gmail.com">hayatiisler65@gmail.com</a> | Telefon: <a href="tel:+905373839345">+90 537 383 93 45</a></p>
@@ -102,6 +101,26 @@
   >
     <img src="images/whatsapp.png" alt="WhatsApp" />
   </a>
+
+  <!-- Müzik çalar (gizli) -->
+  <audio id="bg-music" autoplay loop muted style="display: none;">
+    <source src="music/hayati-muzik.mp3" type="audio/mp3" />
+    Tarayıcınız müzik çaları desteklemiyor.
+  </audio>
+
+  <!-- Müziği başlat butonu -->
+  <button onclick="playMusic()" style="position: fixed; bottom: 20px; right: 20px; padding: 10px 15px; z-index: 999;">
+    🎵 Müziği Başlat
+  </button>
+
+  <!-- Müzik başlatma scripti -->
+  <script>
+    function playMusic() {
+      const audio = document.getElementById("bg-music");
+      audio.muted = false;
+      audio.play();
+    }
+  </script>
 
 </body>
 </html>
