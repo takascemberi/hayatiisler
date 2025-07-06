@@ -232,6 +232,19 @@
     const name = document.getElementById("name").value.trim();
     const comment = document.getElementById("comment").value.trim();
 
+    const forbiddenWords = [
+      "amk", "aq", "orospu", "salak", "aptal", "piç", "sik", "yarrak", "anan",
+      "göt", "meme", "siktir", "küfür", "hakaret", "ibne", "berbat", "çok kötü", "kro", "şerefsiz", "kargakürt"
+    ];
+
+    const lowerComment = comment.toLowerCase();
+    const containsBad = forbiddenWords.some(word => lowerComment.includes(word));
+
+    if (containsBad) {
+      errorBox.textContent = "Yorumunuz ahlak kurallarına uymadığı için reddedilmiştir.";
+      return;
+    }
+
     if (!name || !comment) {
       errorBox.textContent = "Lütfen tüm alanları doldurun.";
       return;
